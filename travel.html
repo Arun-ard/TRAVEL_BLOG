@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beyond The Map</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="travel.css"/>
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon/android-chrome-192x192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="favicon/android-chrome-512x512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-icon">🏞</span>
+        <h1>Beyond The Map</h1>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#posts" class="nav-link">Journal</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Stories that take you places</h2>
+      <p>Real adventures. Honest travel writing. Beautiful photography.</p>
+      <div class="hero-buttons">
+        <a href="#posts" class="btn primary">Read the Journal</a>
+        <button class="btn secondary" id="surprise-me">Surprise Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="featured">
+    <div class="container">
+      <div class="featured-card" data-id="0">
+        <div class="featured-image">
+          <img src="hq720.jpg" alt="Kerala backwaters">
+        </div>
+        <div class="featured-content">
+          <div class="meta">Kerala, India • March 2025</div>
+          <h3>Kerala </h3>
+          <p>Kerala (often called God's Own Country) is the southwestern state in India known for its lush greenery, backwaters, beaches, hill stations.</p>
+          <div class="read-more">Read story →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <main id="posts" class="posts-section">
+    <div class="container">
+      <div class="filters">        
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="kerala">Kerala</button> 
+        <button class="filter-btn" data-category="nature">Nature</button>
+        <button class="filter-btn" data-category="beach">Beach</button>
+        <button class="filter-btn" data-category="city">City</button>                
+      </div>
+
+      <div class="posts-grid" id="posts-grid">
+        <!-- Posts inserted by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Destinations Showcase -->
+  <section id="destinations" class="destinations">
+    <div class="container">
+      <h2>Where Next?</h2>
+      <div class="dest-grid">
+        <div class="dest-card" data-id="0"><img src="652c0088e94271697382536.jpg" alt="Bekal Fort"><span>Bekal Fort</span></div>
+        <div class="dest-card" data-id="1"><img src="sunset-time-in-chinese.jpg" alt="Chinese fishing nets"><span>Kochi (Cochin)</span></div>
+        <div class="dest-card" data-id="2"><img src="kovalam-beach-thiruvananthapuram-kerala-2-attr-hero.jpg" alt="Kovalam "><span>Kovalam</span></div>
+        <div class="dest-card" data-id="3"><img src="beauty-at-its-bestin.jpg" alt="Athirappilly Waterfalls"><span>Athirappilly</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">🏞</span>
+          <h1>Beyond The Map</h1>
+        </div>
+        <p>Independent travel stories since 2026.<br>Made with love in Kerala, India.</p>
+      </div>
+
+      <div>
+        <h4>Journal</h4>
+        <ul>
+          <li><a href="#posts">Latest Stories</a></li>
+          <li><a href="#">Submit Your Story</a></li>
+          <li><a href="#">Photography Tips</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/_arun_.dev__?igsh=MW9paGdvcHM5YTh1dw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/arun-dev-79a4b221b/" target="_blank"><i class="fa-brands fa-Linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025–2026 Beyond The Map Journal • All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+
+      <img id="modal-hero" class="modal-hero" src="" alt="">
+
+      <div class="modal-body">
+        <div class="modal-meta" id="modal-meta"></div>
+        <h1 id="modal-title"></h1>
+        <div class="modal-text" id="modal-content"></div>
+
+        <div class="video-wrapper" id="video-wrapper">
+          <!-- YouTube iframe will be inserted here -->
+        </div>
+
+        <div class="modal-gallery">
+          <img id="gallery-1" src="" alt="">
+          <img id="gallery-2" src="" alt="">
+          <img id="gallery-3" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="travel.js"></script>
+</body>
+</html>
